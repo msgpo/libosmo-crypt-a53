@@ -7,4 +7,5 @@ AM_CFLAGS = -fPIC -Wall
 
 lib_LTLIBRARIES = libosmo-crypto-a53.la
 
-libosmo_crypto_a53_la_SOURCES = a53f.c kgcore.c kasumi.c
+libosmo_crypto_a53_la_SOURCES = a53f.c kgcore.c kasumi.c osmocom.c
+libosmo_crypto_a53_la_LDFLAGS = -shared
