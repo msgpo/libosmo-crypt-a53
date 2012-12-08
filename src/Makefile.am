@@ -3,7 +3,8 @@
 LIBVERSION=0:0:0
 
 INCLUDES = $(all_includes) -I$(top_srcdir)/include
-AM_CFLAGS = -fPIC -Wall
+AM_CFLAGS = -fPIC -Wall $(LIBOSMOCORE_CFLAGS)
+AM_LDFLAGS = $(LIBOSMOCORE_LIBS)
 
 lib_LTLIBRARIES = libosmo-crypto-a53.la
 

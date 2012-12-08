@@ -31,6 +31,9 @@ AC_COMPILE_IFELSE([AC_LANG_SOURCE([char foo;])],
 CFLAGS="$saved_CFLAGS"
 AC_SUBST(SYMBOL_VISIBILITY)
 
+dnl Check for libraries
+PKG_CHECK_MODULES(LIBOSMOCORE, libosmocore)
+
 dnl Generate the output
 AM_CONFIG_HEADER(config.h)
 
