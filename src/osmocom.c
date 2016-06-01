@@ -16,7 +16,7 @@ static int gea3_run(uint8_t *out, uint16_t len, uint8_t *kc, uint32_t iv,
 	else
 		dir = 1;
 
-	GEA3(kc, sizeof(kc), iv, dir, out, len);
+	GEA3(kc, 64, iv, dir, out, len);
 
 	return 0;
 }
