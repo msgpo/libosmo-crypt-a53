@@ -6,7 +6,7 @@
 #include "kasumi.h"
 #include "a53f.h"
 
-static int gea3_run(uint8_t *out, uint16_t len, uint64_t kc, uint32_t iv,
+static int gea3_run(uint8_t *out, uint16_t len, uint8_t *kc, uint32_t iv,
 		     enum gprs_cipher_direction direction)
 {
 	uint8_t dir;
@@ -16,7 +16,7 @@ static int gea3_run(uint8_t *out, uint16_t len, uint64_t kc, uint32_t iv,
 	else
 		dir = 1;
 
-	GEA3((uint8_t *)&kc, sizeof(kc), iv, dir, out, len);
+	GEA3(kc, sizeof(kc), iv, dir, out, len);
 
 	return 0;
 }
